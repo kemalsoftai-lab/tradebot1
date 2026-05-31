@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mum Avcısı | Akıllı Piyasa Sinyalleri</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">
+        <span class="logo" aria-hidden="true">
+          <svg class="logo-mark" viewBox="0 0 64 64" role="img">
+            <defs>
+              <linearGradient id="logoGlow" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#00f5ff"/>
+                <stop offset="55%" stop-color="#7c3cff"/>
+                <stop offset="100%" stop-color="#ff2df7"/>
+              </linearGradient>
+              <filter id="softGlow">
+                <feGaussianBlur stdDeviation="1.6" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <circle cx="32" cy="32" r="25" class="logo-ring"/>
+            <circle cx="32" cy="32" r="15" class="logo-ring muted-ring"/>
+            <path d="M12 42 C22 28, 30 38, 39 24 S52 21, 56 14" class="logo-trend"/>
+            <g filter="url(#softGlow)">
+              <line x1="22" y1="20" x2="22" y2="45" class="wick green-wick"/>
+              <rect x="18" y="27" width="8" height="14" rx="2" class="candle-up"/>
+              <line x1="32" y1="16" x2="32" y2="48" class="wick red-wick"/>
+              <rect x="28" y="22" width="8" height="19" rx="2" class="candle-down"/>
+              <line x1="43" y1="18" x2="43" y2="43" class="wick green-wick"/>
+              <rect x="39" y="24" width="8" height="12" rx="2" class="candle-up"/>
+            </g>
+            <path d="M32 6 V12 M32 52 V58 M6 32 H12 M52 32 H58" class="logo-cross"/>
+          </svg>
+        </span>
+        <span>MUM AVCISI</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Stratejiler</a>
+        <a href="#market">Piyasa</a>
+        <a href="#app">Panel</a>
+        <a href="#pricing">Fiyat</a>
+        <a href="#risk">Risk</a>
+      </div>
+      <div class="nav-actions" id="guestNavActions">
+        <button class="btn btn-ghost" data-mode="login">Giriş</button>
+        <button class="btn btn-primary" data-mode="register">Ücretsiz Sinyal Al</button>
+      </div>
+      <div class="nav-actions hidden" id="userNavActions">
+        <span class="nav-user" id="navUserName">Aktif Hesap</span>
+        <a class="btn btn-primary" href="#app">Panele Git</a>
+        <button class="btn btn-ghost" id="navLogoutButton">Çıkış</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="container hero">
+      <div>
+        <h1>Piyasa hareketlerini <span class="gradient-text">daha akıllı</span> yakala.</h1>
+        <p class="lead">
+          RSI uyumsuzluğu, MACD kırılımı ve EMA trend filtresiyle hazırlanan işlem fırsatlarını tek panelden takip et. Hesabını oluştur, ilk sinyal hakkını kullan.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" data-mode="register">İlk Sinyali Başlat</button>
+          <a class="btn btn-ghost" href="#features">Sistem Nasıl Çalışır?</a>
+        </div>
+        <div class="stats pricing-info">
+          <div class="stat">
+            <strong>1. Sinyal</strong>
+            <span>Kayıt olduktan sonra ilk sinyal ücretsiz olarak tanımlanır.</span>
+          </div>
+          <div class="stat">
+            <strong>Sonraki</strong>
+            <span>İkinci sinyal 10$ olur; her yeni sinyal hakkı +5$ artar.</span>
+          </div>
+          <div class="stat">
+            <strong>Limit</strong>
+            <span>Sinyal fiyatı 100$ seviyesine ulaştığında sabit kalır.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="terminal">
+        <div class="terminal-top">
+          <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          <strong>MARKET_SIGNAL_SCAN</strong>
+        </div>
+        <div class="terminal-body">
+          <div class="matrix-line"><span>BTCUSDT / RSI Divergence</span><b class="up">%87</b></div>
+          <div class="matrix-line"><span>ETHUSDT / MACD Cross</span><b class="hot">%82</b></div>
+          <div class="matrix-line"><span>SOLUSDT / EMA Trend</span><b class="up">%79</b></div>
+          <div class="matrix-line"><span>Risk Engine</span><b>STOP LOSS READY</b></div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="container section">
+      <div class="section-title">
+        <h2>Teknik analiz + ML skoru</h2>
+        <p>Panel, teknik göstergeleri ve risk yönetimini sade bir sinyal deneyimiyle birleştirir.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card"><div class="icon">📉</div><h3>RSI Uyumsuzluğu</h3><p>Potansiyel dönüş bölgeleri için RSI ve fiyat davranışı taranır.</p></div>
+        <div class="card"><div class="icon">⚡</div><h3>MACD & EMA</h3><p>Momentum ve trend kalitesi MACD/EMA filtreleriyle değerlendirilir.</p></div>
+        <div class="card"><div class="icon">🧠</div><h3>Başarı Olasılığı</h3><p>Her sinyal; giriş, hedef, stop loss ve başarı olasılığı alanlarıyla sunulur.</p></div>
+      </div>
+    </section>
+
+
+    <section id="market" class="container section">
+      <div class="section-title">
+        <h2>Canlı piyasa takibi</h2>
+        <p>Binance verileriyle USDT paritelerini, 24 saatlik değişimi, hacmi, en yüksek ve en düşük fiyat aralığını tek ekrandan takip et.</p>
+      </div>
+
+      <div class="market-panel">
+        <div class="market-toolbar">
+          <div>
+            <span class="tag">Binance canlı veri</span>
+            <h3>Canlı USDT piyasası</h3>
+          </div>
+          <div class="market-controls">
+            <input id="marketSearch" placeholder="Coin ara: BTC, ETH, SOL..." />
+            <button class="btn btn-ghost" id="marketSizeButton">Daha Fazla Göster</button>
+            <button class="btn btn-primary" id="refreshMarketButton">Yenile</button>
+          </div>
+        </div>
+
+        <div class="market-status" id="marketStatus">Piyasa verileri yükleniyor...</div>
+
+        <div class="table-wrap">
+          <table class="market-table">
+            <thead>
+              <tr>
+                <th>Parite</th>
+                <th>Son Fiyat</th>
+                <th>24s Değişim</th>
+                <th>24s Yüksek</th>
+                <th>24s Düşük</th>
+                <th>Hacim</th>
+              </tr>
+            </thead>
+            <tbody id="marketRows">
+              <tr><td colspan="6">Yükleniyor...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="app" class="container section">
+      <div class="section-title">
+        <h2>Kullanıcı paneli</h2>
+        <p>Üyeliğini oluştur, hesabını doğrula ve sinyal panelinden işlem fırsatlarını takip et.</p>
+      </div>
+
+      <div class="app">
+        <aside class="auth-card account-box">
+          <div id="authArea">
+            <div class="auth-header center-auth">
+              <span class="tag">Üye Girişi</span>
+              <h3 id="authTitle">Hesabına giriş yap</h3>
+              <p id="authSubtitle">Sinyal paneline erişmek için telefon numaran ve şifrenle giriş yap.</p>
+            </div>
+
+            <form id="authForm" class="auth-form">
+              <div id="nameGroup" class="form-group hidden">
+                <label>Ad Soyad</label>
+                <input id="name" placeholder="Adınızı ve soyadınızı yazın" autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label>Telefon Numarası</label>
+                <input id="phone" placeholder="+90 5xx xxx xx xx" autocomplete="tel" />
+              </div>
+              <div class="form-group">
+                <label>Şifre</label>
+                <input id="password" type="password" placeholder="En az 6 karakter" autocomplete="current-password" />
+              </div>
+              <button class="btn btn-primary w-full" type="submit" id="authButton">Giriş Yap</button>
+              <p class="form-note" id="authNote">Henüz hesabın yok mu? <button type="button" class="link-button" id="switchAuthButton">Kayıt ol</button></p>
+            </form>
+          </div>
+
+          <div id="accountCard" class="account-summary hidden">
+            <div class="profile-row">
+              <div class="avatar-mark">M</div>
+              <div>
+                <span class="tag">Üye Hesabı</span>
+                <h3 id="accountName">—</h3>
+                <p id="accountPhone">—</p>
+              </div>
+            </div>
+
+            <div class="account-mini-grid">
+              <div><strong id="accountCredits">0</strong><span>Sinyal hakkı</span></div>
+              <div><strong id="accountPrice">10$</strong><span>Sonraki fiyat</span></div>
+            </div>
+
+            <div class="account-status-line">
+              <span>Hesap durumu</span>
+              <b id="accountStatusText">Kontrol ediliyor</b>
+            </div>
+          </div>
+
+          <div id="verifyCard" class="verify-card hidden">
+            <div class="verify-top">
+              <div>
+                <strong>Telefon Doğrulama</strong>
+                <p>Giriş yaptıktan sonra telefonuna tanımlanan güvenlik kodunu gir.</p>
+              </div>
+              <span id="verifyState" class="status-pill warning">Bekliyor</span>
+            </div>
+            <form id="otpForm">
+              <div class="form-group">
+                <label>Doğrulama Kodu</label>
+                <input id="otpCode" placeholder="6 haneli kod" maxlength="6" />
+              </div>
+              <button class="btn btn-primary w-full" type="submit">Hesabı Doğrula</button>
+              <button class="btn btn-ghost w-full mt-10" type="button" id="sendOtpButton">Kodu Tekrar Gönder</button>
+            </form>
+          </div>
+        </aside>
+
+        <section class="dashboard">
+          <div class="dash-head">
+            <div>
+              <div class="user-chip hidden" id="sessionStatus"></div>
+              <h2>Sinyal Konsolu</h2>
+            </div>
+            <button class="btn btn-ghost" id="logoutButton">Çıkış</button>
+          </div>
+
+          <div id="emptyState" class="signal-card">
+            <span class="tag">Kilitli Panel</span>
+            <div class="pair mt-12">Giriş yaparak panele eriş</div>
+            <p class="lead mini">Panel üzerinden hesap doğrulama, sinyal hakları ve işlem geçmişi yönetilir.</p>
+          </div>
+
+          <div id="signalPanel" class="hidden">
+            <div class="signal-card">
+              <div class="signal-top">
+                <div>
+                  <span class="tag" id="signalBadge">Sinyal</span>
+                  <div class="pair" id="pairName">Henüz sinyal yok</div>
+                </div>
+                <div class="right">
+                  <span class="small">Başarı Olasılığı</span>
+                  <div class="confidence" id="confidence">—</div>
+                </div>
+              </div>
+
+              <div class="signal-grid">
+                <div class="metric"><span>Giriş Fiyatı</span><b id="entry">—</b></div>
+                <div class="metric"><span>Satış / Hedef</span><b id="target">—</b></div>
+                <div class="metric"><span>Kar Yüzdesi</span><b id="profit">—</b></div>
+                <div class="metric"><span>Stop Loss</span><b id="stop">—</b></div>
+              </div>
+
+              <strong>Sinyal Kaynağı</strong>
+              <div class="sources" id="sources"></div>
+
+              <div class="notice" id="deliveryNotice">
+                Hesabın aktif olduğunda mevcut sinyal haklarınla yeni işlem fırsatlarını görüntüleyebilirsin.
+              </div>
+            </div>
+
+            <div id="pricing" class="pricing-row">
+              <div class="pricing-card">
+                <span class="small">Mevcut sinyal hakkı</span>
+                <div class="price" id="credits">0</div>
+              </div>
+              <div class="pricing-card">
+                <span class="small">Sonraki sinyal fiyatı</span>
+                <div class="price" id="nextPrice">10$</div>
+                <button class="btn btn-primary w-full" id="payButton">Sinyal Hakkı Satın Al</button>
+              </div>
+            </div>
+
+            <div class="actions-row">
+              <button class="btn btn-primary" id="generateButton">Yeni Sinyal Al</button>
+              <button class="btn btn-ghost" id="historyButton">Sinyal Geçmişi</button>
+            </div>
+
+            <div id="history" class="history"></div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="risk" class="container section">
+      <div class="section-title">
+        <h2>Risk bildirimi</h2>
+        <p>Bu platform yatırım tavsiyesi sunmaz; ML tabanlı analizler ve teknik göstergeler doğrultusunda bilgilendirici sinyal verileri sağlar. Finansal piyasalarda tüm işlem kararları ve doğabilecek riskler tamamen kullanıcı sorumluluğundadır.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Bu site SERDEM TOMBAK ve MAHMUT KEMAL DUYSAK tarafından oluşturulmuştur.</div>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
